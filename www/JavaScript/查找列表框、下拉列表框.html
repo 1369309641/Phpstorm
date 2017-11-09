@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查找列表框、下拉列表框</title>
+    <script type="text/javascript">
+
+    </script>
+</head>
+<body>
+   <select id="city" name="city" size="5"><!--5表示的是可见选项数目-->
+       <option value="beijing">北京</option>
+       <option value="shanghai" selected="selected">上海</option><!--selected表示的是默认选项-->
+       <option value="tianjin">天津</option>
+       <option value="nanjing">南京</option>
+       <option value="shengzhen">深圳</option>
+       <option value="wuhan">武汉</option>
+   </select><br>
+
+   <input type="button" value="第一个城市" onclick="change(s_city.options[0])"/>
+   <input type="button" value="上一个城市"
+          onclick="change(s_city.options[s_city.selectedIndex-1])"/>
+   <input type="button" value="下一个城市"
+          onclick="change(s_city.options[s_city.selectedIndex+1])"/>
+   <input type="button" value="最后一个城市"
+          onclick="change(s_city.options[s_city.length-1])"/><!-- -1是因为下标从0开始-->
+
+
+
+   <script type="text/javascript">
+     var s_city=document.getElementById("city");
+     var change=function (city) {
+         alert(city.text);//如果是value的话说明是值
+     }
+   </script>
+</body>
+</html>

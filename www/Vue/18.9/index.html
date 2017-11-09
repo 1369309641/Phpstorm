@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+    <style>
+        .panel{
+            max-width: 300px;
+            border: 1px solid #999;
+            margin-bottom: 15px;
+        }
+        .panel >*{
+        padding: 15px;
+        }
+        .panel .title{
+            border-bottom: 1px solid #999;
+        }
+        .panel .footer{
+            border-top: 1px solid #999;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <panel></panel>
+    <panel></panel>
+    <panel></panel>
+</div>
+    <div>
+        <template id="panel-tpl">
+          <div class="panel">
+          <div class="title">Yo.</div>
+          <div class="content">Lorem ipsum dolor set sakl adkl
+           jaklsj ad asmf  sfdsg fh erwe hdf cx vxgd e dgdv xsf
+           hf nbv zzc mh ki o nf g
+          </div>
+          <div class="footer">更多信息</div>
+           </div>
+        </template>
+    </div>
+
+<script src="../lib/vue.js"></script>
+<script src="../18.9/js/main.js"></script>
+</body>
+</html>

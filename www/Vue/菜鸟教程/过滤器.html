@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器</title>
+    <script src="../lib/vue.js"></script>
+    <!--Vue.js 允许你自定义过滤器，被用作一些常见的文本格式化。由"管道符"指示, 格式如下：
+    &lt;!&ndash; 在两个大括号中 &ndash;&gt;
+    {{ message | capitalize }}-->
+    <!-- 在 v-bind 指令中 -->
+    <!--<div v-bind:id="rawId | formatId"></div>-->
+</head>
+<body>
+<!--以下实例对输入的字符串第一个字母转为大写：-->
+<div id="app">
+    {{message | capitalize}}
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            message:'i love you runoob!'
+        },
+     filters:{
+            capitalize:function (value) {
+              if(!value) return''
+            value = value.toString()
+                return value.charAt(0).toUpperCase() + value.slice(1)
+            }
+     }
+    })
+</script>
+</body>
+</html>

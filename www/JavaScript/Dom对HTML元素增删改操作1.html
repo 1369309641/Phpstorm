@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查找表单控件</title>
+    <script type="text/javascript">
+      function createSelect() {
+         var element=document.createElement("select");
+         for(var i= 0;i<10;i++){
+             var op=new Option("新增的选项"+i,i);
+             element.options[i]=op;
+         }
+         element.size=5;//可显示的条数
+         element.id="city";
+         document.getElementById("test").appendChild(element);
+      }
+
+      function delOne() {
+          var city=document.getElementById("city");
+          if(city.options.length>0){
+              city.remove(city.options.length-1);
+          }
+      }
+
+      function clearAll() {
+          var city=document.getElementById("city");
+          if(city.options.length>0){
+              city.options.length=0;
+          }
+      }
+    </script>
+</head>
+<body id="test">
+   <input type="button" value="创建一个城市列表框" onclick="createSelect()"/>
+   <input type="button" value="逐条删除列表框" onclick="delOne()"/>
+   <input type="button" value="清空列表框" onclick="clearAll()"/>
+
+</body>
+</html>

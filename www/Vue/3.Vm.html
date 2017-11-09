@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VUe实例</title>
+</head>
+<body>
+<div id="app">
+    {{message.name}}
+</div>
+<script src="lib/vue.js"></script>
+<script>
+    var mess ={
+    name:1
+};
+    var vm =new Vue({
+        el:'#app',
+        data:{
+            message:mess
+        }
+    });
+    //我们当前实例vm和mess指向的是同一内存空间
+    //vm.message.name=100;
+    //在实例创建后挂载以前不存在的属性是不会刷新新视图的
+    mess.name=100;
+    alert(vm.message == mess)
+</script>
+</body>
+</html>

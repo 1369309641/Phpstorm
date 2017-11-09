@@ -1,0 +1,10 @@
+@charset "utf-8";
+b{
+    font-style: italic;
+}
+[href^="http"]{
+    color:red;
+}
+[href*="baidu"]{
+    color:red;
+}

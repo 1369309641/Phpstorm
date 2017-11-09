@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<!--屏幕和设备的屏幕保持一致，初始比例为1:1，禁止用户缩放<!---->
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>表格</title>
+
+<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
+<script src="../bootstrap-3.3.7-dist/js/jquery.min.js"></script>
+<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<style type="text/css">
+    div[class*="col-md"]{
+        border: 1px solid blue;
+    }
+</style>
+</head>
+<body>
+<div class="container" style="background: #FFFFFF;">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <img src="images/3.jpg" class="img-responsive img-thumbnail">
+               <p>
+                在 Bootstrap 2 中，我们对框架中的某些关键部分
+                增加了对移动设备友好的样式。而在 Bootstrap 3
+                中，我们重写了整个框架，使其一开始就是对移动设
+                备友好的.
+               </p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <img src="images/3.jpg" class="img-responsive img-thumbnail">
+            <p>
+                在 Bootstrap 2 中，我们对框架中的某些关键部分
+                增加了对移动设备友好的样式。而在 Bootstrap 3
+                中，我们重写了整个框架，使其一开始就是对移动设
+                备友好的.
+            </p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <img src="images/3.jpg" class="img-responsive img-thumbnail">
+            <p>
+                在 Bootstrap 2 中，我们对框架中的某些关键部分
+                增加了对移动设备友好的样式。而在 Bootstrap 3
+                中，我们重写了整个框架，使其一开始就是对移动设
+                备友好的.
+            </p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <img src="images/3.jpg" class="img-responsive img-thumbnail">
+            <p>
+                在 Bootstrap 2 中，我们对框架中的某些关键部分
+                增加了对移动设备友好的样式。而在 Bootstrap 3
+                中，我们重写了整个框架，使其一开始就是对移动设
+                备友好的.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-1">1</div>
+        <div class="col-md-1">1</div>
+        <div class="col-md-1">1</div>
+        <div class="col-md-1">1</div>
+        <div class="col-md-1">1</div>
+        <div class="col-md-1">1</div>
+        <div class="col-md-1">1</div>
+        <div class="col-md-1">1</div>
+        <div class="col-md-1">1</div>
+        <div class="col-md-1">1</div>
+        <div class="col-md-1">1</div>
+        <div class="col-md-1">1</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">888</div>
+        <!--只能向右侧偏移-->
+        <div class="col-md-2 col-md-offset-3">66</div><!--向右偏移3个列-如果是7不够的话，另起一行-->
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4">444</div>
+        <div class="col-md-8">999</div>
+    </div>
+
+    <div class="row"><!--上面的对调位置（了解）-->
+        <div class="col-md-4 col-md-push-8">444</div><!--向右移动8个列-->
+        <div class="col-md-8 col-md-pull-4">999</div><!--向左移动4个列-->
+    </div>
+</div>
+</body>
+</html>

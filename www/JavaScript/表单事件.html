@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        function login(){
+            var userName = document.getElementById("userName").value;
+            var pwd = document.getElementById("pwd").value;
+            var matchResult = true;
+            if(userName == " " || pwd==""){
+                alert("请确认登录名和密码输入正确！");
+                matchResult = false;
+            }
+            return matchResult;
+        }
+    </script>
+    <title>Form事件的例子</title>
+</head>
+<body>
+<form name="loginForm" action="http://www.baidu.com"
+         onsubmit="return login()" method="post">
+    <table bgcolor="#87ceeb" width="200" cellspacing="0" cellpadding="0"
+    border="0" align="left" valign="top">
+        <tr>
+            <td class="table-table" colspan="2" align="center"
+            bgcolor="#4682b4">用户登录</td>
+        </tr>
+        <tr>
+            <td width="50" height="28"align="right">用户名</td>
+            <td>
+                <input id="userName" name="userName" type="text" class="input">
+            </td>
+        </tr>
+        <tr>
+            <td width="50" height="28"align="right">密&nbsp;&nbsp;码</td>
+            <td>
+                <input id="pwd" name="pwd" type="password" class="input">
+            </td>
+        </tr>
+        <tr>
+            <td width="50" height="28"align="right"></td>
+            <td><input type="submit" value="登录">
+            <input type="button" value="取消" onclick="reset()"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

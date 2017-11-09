@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--屏幕和设备的屏幕保持一致，初始比例为1:1，禁止用户缩放<!---->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>输入框组</title>
+
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script src="../bootstrap-3.3.7-dist/js/jquery.min.js"></script>
+    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container" style="background: #e6e6e6;">
+    <button class="btn-primary">确定要删除吗?</button>
+    <input type="button" value="修改" class="btn-default">
+    <a href="#" class="btn-danger btn-lg">修改内容</a><!--大的-->
+    <a href="#" class="btn-danger active">修改内容</a><!--默认的-->
+    <a href="#" class="btn-warning btn-sm">修改内容</a><!--小的-->
+    <a href="#" class="btn-success btn-xs">修改内容</a><!--最小的-->
+    <a href="#" class="btn-success active">修改内容</a>
+
+    <br><hr>
+
+    <!--按钮组-->
+    <div class="btn-group"><!--给父元素加btn-group-->
+        <button class="btn btn-success">按钮内容</button>
+        <button class="btn btn-success">修改内容</button>
+        <button class="btn btn-success">查询内容</button>
+    </div>
+
+    <br><hr>
+
+    <div class="btn-group">
+        <button class="btn btn-primary">11111</button>
+        <button class="btn btn-warning">22222</button>
+        <button class="btn btn-danger">33333</button>
+    </div>
+
+</div>
+</body>
+</html>

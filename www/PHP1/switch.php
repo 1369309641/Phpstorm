@@ -1,0 +1,21 @@
+<?php
+
+$weekday=5;
+switch ($weekday){
+    case 1:
+        echo "³Ô·¹£¡";
+        break;
+    case 2:
+        echo "ºÈÖà£¡";
+        break;
+    case 3:
+        echo "³ÔÎ÷¹Ï£¡";
+        break;
+    default:
+        echo "²»³ÔÀ­µ¹";
+
+    
+    
+}
+
+?>

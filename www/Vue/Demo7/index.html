@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <div class="aui-content"...>
+  <div class="aui-btn aui-btn-block aui-btn-sm aui-btn-danger" v-if="uid>99" >
+   登录
+  </div>
+  <div class=aui-btn aui-btn-block aui-btn-sm  v-else-if="uid==='B'" >
+   登录
+   </div>
+   <div class="aui-margin-t-15">
+       <div class="aui-pull-left">
+           <p class="aut-text-danger" onclick="open_findpassword()">忘记密码</p>
+       </div>
+       <div class="aui-pull-right">
+           <p class="color" onclick="open_regwin()">免费注册</p>
+       </div>
+   </div>
+  </div>
+</div>
+<script src="../lib/vue.js"></script>
+<script src="../Demo7/js/main.js"></script>
+</body>
+</html>

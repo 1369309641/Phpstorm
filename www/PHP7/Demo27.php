@@ -1,0 +1,12 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Administrator
+ * Date: 2017/7/6 0006
+ * Time: 14:14
+ */
+//·Ö¸î×Ö·û´®
+$str = "PHP±à³Ì´Êµä@NET±à³Ì´Êµä@ASP±à³Ì´Êµä";
+$str_arr = explode("@",$str);
+print_r($str_arr);
+?>

@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/*@import "test.css";直接导入的话就不用Link*/
+p{
+   color: orange;
+   font-size: 50px;
+}
+

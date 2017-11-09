@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var f= new Function ('name','age','alert("姓名:"+name+",年龄："+age);');
+        //f('张三','40');
+        //alert(typeof f);//确定是不是函数
+        //alert(f instanceof Function);//确定是不是Function对象的实例
+       window.f("张三",40); //方法默认属于windows对象
+    </script>
+</head>
+<body>
+
+</body>
+</html>

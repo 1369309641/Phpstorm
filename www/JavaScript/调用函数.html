@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+       /* function show(name,age) {
+            alert("你好!"+name+"，今年："+age);
+        }
+        //window.show('张三',30);
+       // show.call(window,'zs',30)
+        show.apply(window,['张三',30]);*/
+
+
+
+
+
+       /*function show(arr,func){
+           func.call(window,arr);
+       }
+        show([1,2,3,4],function (arr) {
+           for(i in arr){
+               document.write(arr[i]+"<br>");
+           }
+        })*/
+       //改成apply方法调用
+       function show(arr,func){
+           func.apply(window,[arr]);
+       }
+       show([1,2,3,4],function (arr) {
+           for(i in arr){
+               document.write(arr[i]+"<br>");
+           }
+       })
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

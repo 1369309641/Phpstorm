@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绑定事件的方式</title>
+    <script type="text/javascript">
+      function test1() {
+         alert("绑定HTML元素属性") ;
+      }
+      function test2() {
+          alert("绑定DOM对象属性") ;
+      }
+    </script>
+</head>
+<body>
+  <a href="http://www.baidu.com" onclick="return true"  >点击我进网页</a><!--为false表明了默认行为被阻止-->
+  <input type="button" value="测试1" id="mytest1" onclick="test1()">
+  <button type="button" id="test2"><b>测试2</b></button>
+  <script type="text/javascript">
+      document.getElementById("test2").onclick=test2;
+  </script>
+</body>
+</html>

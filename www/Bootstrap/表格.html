@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<!--屏幕和设备的屏幕保持一致，初始比例为1:1，禁止用户缩放<!---->
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>表格</title>
+
+<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
+<script src="../bootstrap-3.3.7-dist/js/jquery.min.js"></script>
+<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</head>
+<body style="background: #FFFFFF;">
+<h3 class="page-header">表格</h3>
+  <div class="table-responsive"><!--《表格的父元素》表格变成响应式，可随<!--移动设备>的屏幕变化保持一致，如果设备屏幕小，会出现响应式滚动条-->
+   <table class="table table-bordered table-hover table-striped
+   table-condensed" ><!--table-hover鼠标悬停效果变色,隔行变色斑马线效果table-striped,table-condensed更紧凑-->
+       <tr class="active"><!--状态类-设置单元格的颜色-->
+           <td>编号</td>
+           <td>商品的名称</td>
+           <td>状态</td>
+       </tr>
+       <tr class="success">
+           <td>0001</td>
+           <td>奥迪</td>
+           <td>未发货</td>
+       </tr>
+       <tr class="info">
+           <td>0002</td>
+           <td>奥拓</td>
+           <td>已发货</td>
+       </tr>
+       <tr class="danger">
+           <td>0003</td>
+           <td>爱玛</td>
+           <td>已退货</td>
+       </tr>
+       <tr class="warning">
+           <td>0004</td>
+           <td>绿源</td>
+           <td>未接收</td>
+       </tr>
+   </table>
+  </div>
+</body>
+</html>

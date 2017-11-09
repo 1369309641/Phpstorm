@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+   <div id="app">
+       {{message}}中国梦
+       <input v-model="message">
+       <a v-bind:href="url">百度</a>
+   </div>
+
+   <script>
+      var vm = new Vue({
+           el:'#app',/*el代表elment元素的意思，后面跟选择器*/
+           data:{
+               message:'hello,world',
+               url:"http://www.baidu.com"
+           }
+       });
+      //vm.$el === document.getElementById("app")
+       vm.$el.style.color="red";
+   </script>
+</body>
+</html>

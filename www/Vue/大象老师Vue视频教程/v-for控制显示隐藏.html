@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>like Demo2</title>
+</head>
+<body>
+<div id="app">
+    <div v-if="seen">可看到的</div>
+</div>
+<script src="../lib/vue.js"></script>
+<button id="btn" type="button">点击显示或者隐藏</button>
+<script>
+    var app =new Vue({
+        el:'#app',
+        data:{
+            seen:true
+        }
+    })
+    
+    var btn = document.getElementById("btn");
+    btn.onclick = function () {
+        app.seen = !app.seen;
+    }
+</script>
+</body>
+</html>

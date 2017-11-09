@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ie特有的监听方式(冒泡型事件流)</title>
+    <script type="text/javascript">
+        function show() {
+            alert("hello ie") ;
+        }
+        window.onload=function () {
+         document.getElementById("test1").attachEvent("onclick",show);
+         document.getElementById("test2").onclick=function () {
+             document.getElementById("test1").detachEvent("onclick",show);
+         }
+        };
+
+    </script>
+</head>
+<body>
+<input type="button" value="测试1" id="test1" onclick="test1()">
+<button type="button" id="test2"><b>测试2</b></button>
+<script type="text/javascript">
+    document.getElementById("test2").onclick=test2;
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查找表单控件</title>
+    <script type="text/javascript">
+       function updateCell() {
+           var row=document.getElementById("row").value;
+           var cel=document.getElementById("cel").value;
+           var t=document.getElementById("mytable");
+           //t.rows[row-1].cells[cel-1].innerHTML=document.getElementById("course").value;
+           t.rows.item(row-1).cells.item(cel-1).innerHTML=document.getElementById("course").value;
+       }
+    </script>
+</head>
+<body>
+   <table id="mytable" border="1">
+   <caption>海同科技课程</caption>
+       <tr>
+           <td>c</td>
+           <td>c++</td>
+       </tr>
+       <tr>
+           <td>LSD</td>
+           <td>ARM</td>
+       </tr>
+       <tr>
+           <td>J2EE</td>
+           <td>Android</td>
+       </tr>
+   </table>
+   <input type="button" value="表格标题"
+          onclick="alert(document.getElementById('mytable').caption.innerHTML);"/>
+   <input type="button" value="第一行、第一格"
+          onclick="alert(document.getElementById('mytable').rows[0].cells[0].innerHTML);"/>
+   <input type="button" value="第二行、第二格"
+          onclick="alert(document.getElementById('mytable').rows[1].cells[1].innerHTML);"/>
+   <input type="button" value="第三行、第三格"
+          onclick="alert(document.getElementById('mytable').rows[2].cells[1].innerHTML);"/><br>
+
+    设置指定单元格的值：第<input type="text" id="row" size="2"/>行,
+    第<input type="text" id="cel" size="2"/>列的值为
+    <input type="text" id="course" size="10"/>
+    <input type="button" id="btn_set" value="修改" onclick="updateCell()"/>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>异常捕捉语句</title>
+    <script type="text/javascript">
+        try{
+            var age=5;
+            if(age==5){
+                throw  new Error("年龄太小了");
+            }
+        }catch(e){
+            document.write("出错："+e.message);
+        }finally {
+            document.write("总会执行的finally块");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用getElementById方法查找元素</title>
+    <script type="text/javascript">
+        function showContent() {
+           var myDiv,txtName,content;
+           with(document){
+               myDiv=getElementById("myDiv");
+               txtName=getElementById("txtName");
+               content=getElementById("content");
+           }
+           alert(myDiv.innerHTML+"\n"+content.value+"\n"+txtName.value);
+        }
+    </script>
+</head>
+<body>
+   <div id="myDiv">我的div块</div>
+   <textarea id="content" rows="3" cols="25">好好学习，天天向上！</textarea><br>
+   <input type="text" id="txtName" value="安哥"/><br>
+   <input type="button" id="btn_show" value="访问三个元素的内容" onclick="showContent()"/>
+</body>
+</html>

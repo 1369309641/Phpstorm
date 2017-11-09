@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        function mouseOver() {
+            document.mouse.src = "pic/1.jpg";
+        }
+        function mouseOut() {
+            document.mouse.src = "pic/1.jpg";
+        }
+        function mousePress() {
+            if (event.button == 2){
+                alert("您单击了鼠标右键！")
+            }else{
+                alert("您单击了鼠标左键！")
+            }
+        }
+    </script>
+</head>
+<body onmousedown="mousePress()">
+
+</body>
+</html>

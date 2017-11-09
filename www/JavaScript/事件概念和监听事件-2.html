@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冒泡型事件测试</title>
+    <script type="text/javascript">
+      function show(sText) {
+          var oDiv=document.getElementById("dispaly");
+          oDiv.innerHTML+=sText;
+      }
+    </script>
+</head>
+<body onclick="show('body<br>');">
+    <div onclick="show('div<br>');">
+        <p onclick="show('p<br>');">click me</p>
+    </div>
+    <div id="display"></div>
+</body>
+</html>

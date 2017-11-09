@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查找表单控件</title>
+    <script type="text/javascript">
+       function  operatorForm() {
+           var myform=document.forms[0];
+           //alert(myform.action);
+           //alert(myform.method);
+           //alert(myform.target);
+
+           //myform.submit();/*对应的是下面的操作表单部分代码*/
+           myform.reset();
+       }
+    </script>
+</head>
+<body>
+   <!-- <form id="myform" action="http://www.baidu.com" method="get" target="_blank">//打开新页面加载URL-->
+    <form id="myform" action="http://www.baidu.com" method="get" target="_self"><!--当前页面加载URL-->
+        <input name="username" type="text" value="安哥"/> <br>
+        <input name="password" type="text" value="1234"/> <br>
+        <select name="city">
+            <option value="shanghai">上海</option>
+            <option value="nanjing" selected="selected">南京</option>
+        </select><br>
+        <input type="button" value="获取表单内第一个控件"
+        onclick="alert(document.getElementById('myform').elements[0].value)";/>
+        <input type="button" value="获取表单内第二个控件"
+        onclick="alert(document.getElementById('myform').elements['password'].value)";/>
+        <input type="button" value="获取表单内第三个控件"
+        onclick="alert(document.getElementById('myform').city.value)";/>
+        <input type="button" value="操作表单" onclick="operatorForm()"/>
+
+
+    </form>
+
+</body>-
+</html>

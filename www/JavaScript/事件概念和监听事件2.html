@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标准DOM监听事件（不支持IE浏览器）</title>
+    <script type="text/javascript">
+        function show() {
+            alert("hello firefox") ;
+        }
+        window.onload=function () {
+            var test1=document.getElementById("mytest1");
+            var test2=document.getElementById("mytest2");
+            test1.addEventListener("click",show,false);
+            test2.addEventListener("click",function () {
+               test1.removeEventListener("click",show,false) ;
+            },false);
+        };
+
+    </script>
+</head>
+<body>
+   <input type="button" value="测试1" id="mytest1" />
+   <button type="button" id="mytest2"><b>测试2</b></button>
+</body>

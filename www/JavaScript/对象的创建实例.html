@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三种方式</title>
+    <script type="text/javascript">
+        /*function student(name,age) {
+            this.name=name;
+            this.age=age;
+            student.gender="男";
+            this.info=function () {
+              document.write("名字："+this.name+",年龄:"+this.age+"性别："+student.gender);
+            }//这里的性别不能用this，属于类变量只能通过类名访问
+        }
+        var s1=new student("张三",30)
+        s1.info();*/
+
+
+
+
+
+        /*var student=new Object();
+        student.name="李四";
+        student.age=40;
+        //student.info=function () {
+        function abc() {
+
+
+            document.write("名字："+this.name+",年龄："+this.age);
+        }
+        student.info=abc;
+        student.info();*/
+
+
+
+
+
+
+
+
+          var person={
+            "name":"张三"  , 
+            "age":30,
+              "son":[{
+                  "name":"jack"  ,
+                  "age":3},{
+                  "name":"rose"  ,
+                  "age":10}
+                    ],
+              "info":function () {
+                  document.write("父类名字："+this.name+",年龄："+this.age+"<br>");
+                  for(var child in this.son){
+                      document.write("儿子名字："+this.son[child].name+",年龄："+this.son[child].age+"<br >");
+                  }
+              }
+     };
+        person.info();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

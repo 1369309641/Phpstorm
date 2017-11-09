@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手动访问和传参</title>
+        <script src="../lib/vue.js"></script>
+        <script src="../lib/vue-router.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>
+        <router-link to="/">首页</router-link>
+        <router-link to="/about">关于我们</router-link>
+        <router-link to="/user/张三">张三</router-link>
+        <router-link to="/user/李四">李四</router-link>
+        <button @click="surf">漫游</button>
+    </div>
+    <div>
+        <router-view></router-view>
+    </div>
+</div>
+<script>
+    var routes=[
+        {
+            path:'/',
+            component:{
+                template:'<div><h1>首页</h1></div>'
+            },
+        },
+
+        {
+            path:'/about',
+            component:{
+                template:'<div><h1>关于我们</h1></div>'
+            },
+        },
+        {
+            path:'/user/:name',
+            component:{
+                template: '<div>' +
+                '<div>我叫：{{$route.params.name}}</div>' +
+                '<router-link to="more" append>更多信息</router-link>' +
+                '<router-view></router-view></div>'
+            },
+            children:[
+                {
+                    path:'more',
+                    component:{
+                        template:'<div>用户：{{$route.params.name}}的详细信息Lorem iskjsakljfklasj jsafjklhaslj lkglkyo dnjsbfu dsnfjshd sdnjhsu rntm cnjdhfi trijn </div>'
+
+                    }
+                }
+            ]
+        },
+    ];
+
+    var router = new VueRouter({
+        routes:routes,
+    });
+
+    new Vue({
+        el:'#app',
+        router:router,
+        methods:{
+            surf:function () {
+              setTimeout(function () {
+                  this.router.push('/about');
+                  setTimeout(function () {
+                      this.router.push('/user/张三')
+                  },2000)
+              },2000)
+            }
+        }
+    });
+</script>
+</body>
+</html>

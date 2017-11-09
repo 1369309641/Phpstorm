@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-show控制显示与隐藏 （同菜鸟教程条件语句2）</title>
+    <script src="lib/vue.js"></script>
+</head>
+<body>
+  <p id="demo" v-show="seen">
+      如意娘<br>
+         武则天<br>
+      看朱成碧思纷纷，<br>
+      憔悴支离为忆君。<br>
+      不信比来长下泪，<br>
+      开箱验取石榴裙。<br>
+  </p>
+
+<script>
+    var app = new Vue({
+        el:'#demo',
+        data:{
+            seen:true/*（设置为false隐藏后，只是设置了display：none，但是元素依然存在）*/
+        }
+    });
+</script>
+</body>
+</html>

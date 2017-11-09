@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对表格元素进行增删改操作</title>
+    <script type="text/javascript">
+       function createTable() {
+          var b=document.getElementById("test");
+          var t=document.createElement("table");
+          t.border="1";
+          t.id="mytable";
+          var caption=t.createCaption();
+          caption.innerHTML="我的表格";
+          for(var i=0;i<5;i++){
+           t.insertRow()//此处的r掉了，
+          }
+       }
+    </script>
+</head>
+<body id="test">
+   <input type="button" value="创建一个5行4列的表格"/>
+   <input type="button" value="删除最后一行"/>
+   <input type="button" value="删除最后一个单元格"/>
+
+</body>
+</html>

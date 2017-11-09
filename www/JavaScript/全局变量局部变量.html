@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+       /*var name="缪建安";//全局变量
+        function show() {
+            var age=10;//局部变量
+            alert(name+"---"+age);
+        }
+        alert(name);
+        alert(age);//结果显示未定义，所以必须在函数内部使用*/
+
+
+
+
+
+
+
+
+
+       var name="缪建安";//全局变量
+       function show() {
+           var name="皮卡邱";//当局部变量的变量名和全局变量名一致时，局部变量会覆盖全局变量
+           var age=10;//局部变量
+           alert(name+"---"+age);
+       }
+       show();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

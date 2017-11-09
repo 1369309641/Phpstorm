@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <topx></topx>
+    <foot></foot>
+</div>
+
+<script>
+    //系统总线
+    var bus = new Vue();
+   /* var child1 = {
+        template:'<li @click="f1'>{{data1}}</li>'
+`        data(){
+            return{
+                data1
+            }
+    }
+    }*/
+
+    var topx = {
+        template: "<h1 v-on:click='f1'>topx组件{{msg1}}</h1>",
+        data(){
+        return{
+            msg1:1
+        }
+        },
+        methods:{
+            f1:function () {
+                bus.$emit('myevent',this.msg1);
+            }
+        }
+        }
+
+   //组件2
+    var foot = {
+        template: "<h1>foot组件{{msg2}}</h1>",
+        data(){
+            return{
+                msg2:3
+            }
+        },
+        created:function () {
+            var that = this;
+            bus.$on("myevent",function (rs) {
+                that.msg2 = rs;
+            })
+        }
+    }
+      //挂载
+     new Vue({
+         el:'#app',
+         components:{ ``
+             topx,
+             foot
+         }
+     })
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三种方式</title>
+    <script type="text/javascript">
+        //使用new关键字调用构造器创建对象
+        /*function Student(name,age) {
+            this.name=name;
+            this.age=age;
+        }
+
+        var s1=new Student();//没有传入参数
+        var s2=new Student("安哥",22);
+        document.write(s1.name+"---"+s1.age+"<br>");
+        document.write(s2.name+"---"+s2.age);*/
+
+
+
+
+
+
+
+
+        //使用Object直接创建对象（此方法用的不多）
+        /*var myObj=new Object();
+        myObj.name="安哥";
+        myObj.age="22";
+        myObj.info=function () {
+            document.write("我的名字叫："+this.name+"<br>") ;
+            document.write("我今年："+this.age+"岁啦<br>") ;
+        }
+        myObj.info();*/
+
+
+
+
+
+
+
+
+
+
+        //使用JSON语法创建对象（更简洁）
+        var p={
+            name:"安哥",
+            gender:"male",
+            info:function () {
+              document.write("姓名："+this.name+"<br>"+"性别："+this.gender);
+            }
+        }
+        p.info();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

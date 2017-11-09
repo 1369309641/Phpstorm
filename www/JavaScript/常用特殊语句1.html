@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        try{
+        var i=5;
+        if(i==5){
+            throw new Error("报错");
+        }
+        }catch(e){
+            document.write("错误信息："+e.message+"<br>")
+        }finally {
+            document.write("finally")
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

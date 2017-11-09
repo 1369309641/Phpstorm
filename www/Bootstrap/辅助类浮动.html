@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--屏幕和设备的屏幕保持一致，初始比例为1:1，禁止用户缩放<!---->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>浮动</title>
+
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script src="../bootstrap-3.3.7-dist/js/jquery.min.js"></script>
+    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <style>
+       .top{
+            width: 500px;
+            border: 1px solid red;
+           margin: 10px auto;
+        }
+       .pull-left{
+           width: 200px;
+           height: 200px;
+           background: yellow;
+       }
+       .pull-right {
+           width: 200px;
+           height: 200px;
+           background: blue;
+       }
+    </style>
+</head>
+<body>
+<div class="container" style="background: #e6e6e6">
+    <div class="top"><!--clearfix清除浮动，添加在父盒子后此处添加在top后面-->
+        <div class="pull-left">
+        我在左边，我是左浮动
+        </div>
+        <div class="pull-right">
+            我在右边，我是右浮动
+        </div>
+    </div>
+</div>
+</body>
+</html>

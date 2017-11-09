@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/vue.js"></script>
+</head>
+<body>
+<h1 id="app" v-text="'今年是'+year+'年'+month+'月'"></h1>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            year:new Date().getFullYear(),
+            month:new Date().getMonth()+1
+        }
+    });
+</script>
+</body>
+</html>

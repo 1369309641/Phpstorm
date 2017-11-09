@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘事件</title>
+    <script language="javascript">
+    function handle(oEvent) {
+      if(window.event) oEvent=window.event;
+      var oDiv=document.getElementById("dispaly");
+      oDiv.innerHTML+=oEvent.type+"&nbsp;&nbsp;";
+    }
+    window.onload=function () {
+       var oTextArea =document.getElementsByName("textarea")[0];
+       oTextArea.onkeydown=handle;
+       oTextArea.onkeyup=handle;
+       oTextArea.onkeypress=handle;
+
+    }
+    </script>
+</head>
+<body>
+   <textarea rows="4" cols="50"></textarea>
+   <div id="display"></div>
+</body>
+</html>

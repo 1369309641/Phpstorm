@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>保留原来的文字排版的格式</title>
+</head>
+<body>
+<p>这是一个段落</p>
+<p>这是另一个段落</p>
+
+<div>这是一个通用分组</div>
+<div>这是另一个通用分组</div>
+
+<blockquote><p>这是一个来自他处的内容</p></blockquote>
+<blockquote><blockquote>这是另一个来自他处的内容</blockquote></blockquote>
+<!--同样可嵌套，第二个缩进了十个字符-->
+#####
+#####
+#####
+#####
+#####<!-- 这个输出来就是直直的一条 -->
+<hr><!-- 添加分割水平线 -->
+<pre>
+          #####
+              #####
+                  #####
+              #####
+          #####
+
+    <!-- 这个就是按这个排列输出 -->
+     </pre>
+
+</body>
+</html>
